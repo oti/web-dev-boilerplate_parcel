@@ -4,12 +4,6 @@
   "version": "1.0.0",
   "description": "Parcel を使ったウェブサイト開発環境のボイラープレート",
   "main": "index.html",
-  "browserslist": [
-    "last 2 versions",
-    "ie > 9",
-    "Android > 3",
-    "iOS > 6"
-  ],
   "dependencies": {
     "babel-preset-env": "^1.7.0",
     "core-js": "^3.6.5"
