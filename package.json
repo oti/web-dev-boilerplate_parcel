@@ -2,30 +2,8 @@
   "private": true,
   "name": "web-dev-boilerplate_parcel",
   "version": "1.0.0",
-  "description": "Parcel を使ったウェブサイト開発環境のボイラープレート",
-  "main": "index.html",
-  "browserslist": [
-    "last 2 versions",
-    "ie > 9",
-    "Android > 3",
-    "iOS > 6"
-  ],
-  "dependencies": {
-    "babel-preset-env": "^1.7.0",
-    "core-js": "^3.6.5"
-  },
-  "devDependencies": {
-    "autoprefixer": "^9.7.6",
-    "html-validator-cli": "^7.0.0",
-    "markuplint": "^1.0.0-alpha.38",
-    "parcel-bundler": "^1.12.4",
-    "prettier": "^2.0.4",
-    "pug": "^2.0.4",
-    "sass": "^1.26.3",
-    "stylelint": "^13.3.2",
-    "stylelint-config-recommended": "^3.0.0",
-    "typescript": "^3.8.3"
-  },
+  "description": "web development env boilerplate with parcel-bundler",
+  "license": "MIT",
   "scripts": {
     "start": "parcel src/index.pug --open --out-dir .tmp",
     "build": "parcel build src/index.pug --no-source-maps --public-url ./",
@@ -35,14 +13,27 @@
     "validate:html": "html-validator --file=dist/index.html --verbose",
     "test": "npm run lint:css & npm run lint:html & npm run validate:html"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oti/web-dev-boilerplate_parcel.git"
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "core-js": "^3.6.5"
   },
-  "author": "oti",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/oti/web-dev-boilerplate_parcel/issues"
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "html-validator-cli": "^7.0.0",
+    "husky": "^4.2.5",
+    "markuplint": "^1.0.0-alpha.38",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "pug": "^2.0.4",
+    "sass": "^1.26.3",
+    "stylelint": "^13.3.2",
+    "stylelint-config-recommended": "^3.0.0",
+    "typescript": "^3.8.3"
   },
-  "homepage": "https://github.com/oti/web-dev-boilerplate_parcel#readme"
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
 }
